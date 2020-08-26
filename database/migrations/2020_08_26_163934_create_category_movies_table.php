@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTypeStatusesTable extends Migration
+class CreateCategoryMoviesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class CreateTypeStatusesTable extends Migration
      */
     public function up()
     {
-        Schema::create('type_statuses', function (Blueprint $table) {
+        Schema::create('category_movies', function (Blueprint $table) {
             $table->id();
-            $table->char('name', 20);
+            $table->integer('movie_id');
+            $table->foreign('movie_id')->references('id')->on('movies');
+            $table->integer('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
@@ -27,6 +30,6 @@ class CreateTypeStatusesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('type_statuses');
+        Schema::dropIfExists('category_movies');
     }
 }
