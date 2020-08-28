@@ -15,9 +15,9 @@ class CreateCategoryMoviesTable extends Migration
     {
         Schema::create('category_movies', function (Blueprint $table) {
             $table->id();
-            $table->integer('movie_id');
+            $table->unsignedBigInteger('movie_id');
             $table->foreign('movie_id')->references('id')->on('movies');
-            $table->integer('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });

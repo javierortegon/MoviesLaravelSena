@@ -15,9 +15,9 @@ class CreateMovieRentalTable extends Migration
     {
         Schema::create('movie_rentals', function (Blueprint $table) {
             $table->id();
-            $table->integer('movie_id');
+            $table->unsignedBigInteger('movie_id');
             $table->foreign('movie_id')->references('id')->on('movies');
-            $table->integer('rental_id');
+            $table->unsignedBigInteger('rental_id');
             $table->foreign('rental_id')->references('id')->on('rentals');
             $table->integer('price');
             $table->char('observations', 100);

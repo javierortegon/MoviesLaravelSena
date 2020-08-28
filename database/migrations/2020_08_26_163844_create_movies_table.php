@@ -17,9 +17,9 @@ class CreateMoviesTable extends Migration
             $table->id();
             $table->char('name', 50);
             $table->longText('description');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('status_id');
+            $table->unsignedBigInteger('status_id');
             $table->foreign('status_id')->references('id')->on('statuses');
             $table->timestamps();
         });

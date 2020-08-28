@@ -18,9 +18,9 @@ class CreateRentalsTable extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->integer('total');
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('status_id');
+            $table->unsignedBigInteger('status_id');
             $table->foreign('status_id')->references('id')->on('statuses');
             $table->timestamps();
         });
