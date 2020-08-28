@@ -15,8 +15,17 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $userData = Auth::user();
-        return view('movies.create', compact('userData'));
+        $movies = Movie::select(
+            'movies.id',
+            'movies.name as name',
+            'movies.description',
+            'users.name as user',
+            'statuses.name as status'
+        )
+            ->join('users', 'movies.user_id', '=' ,'users.id')
+            ->join('statuses', 'movies.status_id', '=' ,'statuses.id')
+            ->get();
+        return view('movies.index', compact('movies'));
     }
 
     /**
@@ -26,7 +35,7 @@ class MoviesController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.create');
     }
 
     /**
@@ -67,7 +76,8 @@ class MoviesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $movie= Movie::find($id);
+        return view('movies.create', compact('movie'));
     }
 
     /**
@@ -79,7 +89,11 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $movie= Movie::find($id);
+        $movie->name = $request->name;
+        $movie->description = $request->description;
+        $movie->status_id = 1;
+        $movie->save();
     }
 
     /**
