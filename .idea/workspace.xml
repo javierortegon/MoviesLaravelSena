@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d8f244c9-b4fd-4139-8564-2461c1ccf0ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +150,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1gdzjA25Ni1a9zPoHUr42idOI0s" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -160,11 +179,36 @@
       <updated>1598459389610</updated>
       <workItem from="1598459390630" duration="2502000" />
       <workItem from="1598493297865" duration="190000" />
-      <workItem from="1598619926815" duration="1931000" />
+      <workItem from="1598619926815" duration="5384000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2379" y="378" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598622059514">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2379" y="378" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622059514" />
+    <state x="2434" y="499" key="NewPhpFileDialog" timestamp="1598622961847">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2434" y="499" key="NewPhpFileDialog/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622961847" />
+    <state x="2263" y="281" key="search.everywhere.popup" timestamp="1598622046326">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2263" y="281" key="search.everywhere.popup/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622046326" />
   </component>
 </project>
