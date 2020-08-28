@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Movie;
+use App\Status;
 
 class MoviesController extends Controller
 {
@@ -55,6 +56,8 @@ class MoviesController extends Controller
         $movie->status_id = 1;
         $movie->save();
 
+        return redirect('movies');
+
     }
 
     /**
@@ -77,7 +80,8 @@ class MoviesController extends Controller
     public function edit($id)
     {
         $movie= Movie::find($id);
-        return view('movies.create', compact('movie'));
+        $statuses = Status::all();
+        return view('movies.edit', compact('movie', 'statuses'));
     }
 
     /**
@@ -92,8 +96,10 @@ class MoviesController extends Controller
         $movie= Movie::find($id);
         $movie->name = $request->name;
         $movie->description = $request->description;
-        $movie->status_id = 1;
+        $movie->status_id = $request->status;
         $movie->save();
+
+        return redirect('movies');
     }
 
     /**

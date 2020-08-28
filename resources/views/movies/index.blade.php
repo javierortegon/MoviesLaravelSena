@@ -26,7 +26,7 @@
                                         <td>{{ $movie->user }}</td>
                                         <td>{{ $movie->status }}</td>
                                         <td>
-                                            <a href="">
+                                            <a href="{{ url('movies/'.$movie->id.'/edit ') }}">
                                                 <button class="btn btn-primary">
                                                     Edit
                                                 </button>
