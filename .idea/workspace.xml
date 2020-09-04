@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f244c9-b4fd-4139-8564-2461c1ccf0ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movies/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movies/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +179,9 @@
       <updated>1598459389610</updated>
       <workItem from="1598459390630" duration="2502000" />
       <workItem from="1598493297865" duration="190000" />
-      <workItem from="1598619926815" duration="8452000" />
+      <workItem from="1598619926815" duration="9202000" />
+      <workItem from="1598646767382" duration="16000" />
+      <workItem from="1599226281820" duration="1034000" />
     </task>
     <servers />
   </component>
@@ -196,12 +198,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2379" y="378" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598622059514">
       <screen x="1920" y="192" width="1360" height="768" />
     </state>
     <state x="2379" y="378" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622059514" />
+    <state x="2380" y="331" key="FileChooserDialogImpl" timestamp="1598646776511">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2380" y="331" key="FileChooserDialogImpl/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598646776511" />
     <state x="2434" y="499" key="NewPhpFileDialog" timestamp="1598622961847">
       <screen x="1920" y="192" width="1360" height="768" />
     </state>
