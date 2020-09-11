@@ -32,6 +32,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @guest
+        <h3>No esta logueado</h3>
+    @endguest
+
+    @auth
+        <h3>Autenticado</h3>
+    @endauth
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

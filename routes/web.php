@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('movies', 'MoviesController')->middleware('auth');
+
+Route::get('/testmiddleware',function () {
+    return ("Tiene Pemiso");
+})->middleware('auth');
