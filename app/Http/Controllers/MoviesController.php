@@ -48,6 +48,8 @@ class MoviesController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
+        //variable de sesion
+        session(['nombreUsuario' => $user->name]);
 
         $movie = new Movie;
         $movie->name = $request->name;
@@ -79,9 +81,14 @@ class MoviesController extends Controller
      */
     public function edit($id)
     {
+        //eliminando la var de session
+        session()->forget('nombreUsuario');
+
         $movie= Movie::find($id);
         $statuses = Status::all();
         return view('movies.edit', compact('movie', 'statuses'));
+
+
     }
 
     /**
@@ -111,5 +118,9 @@ class MoviesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function showSessionData(){
+        return view('movies.sessionData');
     }
 }

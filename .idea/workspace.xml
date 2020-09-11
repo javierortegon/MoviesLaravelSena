@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f244c9-b4fd-4139-8564-2461c1ccf0ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -214,6 +214,10 @@
       <screen x="1920" y="192" width="1360" height="768" />
     </state>
     <state x="2434" y="499" key="NewPhpFileDialog/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622961847" />
+    <state x="2307" y="309" width="586" height="534" key="find.popup" timestamp="1599834752241">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2307" y="309" width="586" height="534" key="find.popup/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1599834752241" />
     <state x="2263" y="281" key="search.everywhere.popup" timestamp="1598622046326">
       <screen x="1920" y="192" width="1360" height="768" />
     </state>
