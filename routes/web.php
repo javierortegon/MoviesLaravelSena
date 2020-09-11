@@ -28,3 +28,5 @@ Route::get('/datasession', 'MoviesController@showSessionData')->name('datasessio
 Route::get('/testmiddleware',function () {
     return ("Tiene Pemiso");
 })->middleware('auth');
+
+Route::get('/pdf', 'PDFController@PDF')->name('pdf');
