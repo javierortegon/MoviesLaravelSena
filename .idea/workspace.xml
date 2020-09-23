@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d8f244c9-b4fd-4139-8564-2461c1ccf0ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +204,9 @@
       <workItem from="1600048939721" duration="325000" />
       <workItem from="1600273268766" duration="918000" />
       <workItem from="1600435162453" duration="19000" />
-      <workItem from="1600435182472" duration="4726000" />
+      <workItem from="1600435182472" duration="5349000" />
+      <workItem from="1600701234291" duration="641000" />
+      <workItem from="1600875323441" duration="2195000" />
     </task>
     <servers />
   </component>
@@ -227,6 +230,10 @@
       <screen x="1920" y="192" width="1360" height="768" />
     </state>
     <state x="2379" y="378" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1598622059514" />
+    <state x="2330" y="331" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1600876117144">
+      <screen x="1920" y="192" width="1360" height="768" />
+    </state>
+    <state x="2330" y="331" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864/1920.192.1360.768@1920.192.1360.768" timestamp="1600876117144" />
     <state x="2380" y="331" key="FileChooserDialogImpl" timestamp="1600435178993">
       <screen x="1920" y="192" width="1360" height="768" />
     </state>

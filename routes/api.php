@@ -23,3 +23,16 @@ Route::get('/newapi', 'MoviesController@index');
 Route::post('user/login', 'AuthController@login');
 
 Route::get('user/all', 'AuthController@allUsers')->middleware('auth:api');
+
+Route::post('movies/create', 'MoviesController@store')->middleware('auth:api');
+
+Route::get('movies/show', 'MoviesController@index')->middleware('auth:api');
+
+Route::get('movies/show/{id}', 'MoviesController@show')->middleware('auth:api');
+
+Route::put('movies/update/{id}', 'MoviesController@update');
+
+Route::delete('movies/delete/{id}', 'MoviesController@destroy');
+
+
+

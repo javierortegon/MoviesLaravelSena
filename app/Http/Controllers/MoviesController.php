@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Movie;
 use App\Status;
+use mysql_xdevapi\Exception;
 
 class MoviesController extends Controller
 {
@@ -16,17 +17,28 @@ class MoviesController extends Controller
      */
     public function index()
     {
-        $movies = Movie::select(
-            'movies.id',
-            'movies.name as name',
-            'movies.description',
-            'users.name as user',
-            'statuses.name as status'
-        )
-            ->join('users', 'movies.user_id', '=' ,'users.id')
-            ->join('statuses', 'movies.status_id', '=' ,'statuses.id')
-            ->get();
-        return view('movies.index', compact('movies'));
+        try{
+            $movies = Movie::select(
+                'movies.id',
+                'movies.name as name',
+                'movies.description',
+                'users.name as user',
+                'statuses.name as status'
+            )
+                ->join('users', 'movies.user_id', '=' ,'users.id')
+                ->join('statuses', 'movies.status_id', '=' ,'statuses.id')
+                ->get();
+
+
+            $data = [
+                $movies
+            ];
+
+            return response()->json($data, 200);
+
+        }catch (Exception $e){
+            return response()->error($e->getMessage(), $e->getCode());
+        }
     }
 
     /**
@@ -47,18 +59,26 @@ class MoviesController extends Controller
      */
     public function store(Request $request)
     {
-        $user = Auth::user();
-        //variable de sesion
-        session(['nombreUsuario' => $user->name]);
+        try{
+            $movie = new Movie;
+            $movie->name = $request->name;
+            $movie->description = $request->description;
+            $movie->user_id = $request->id_user;
+            $movie->status_id = 1;
+            $movie->save();
 
-        $movie = new Movie;
-        $movie->name = $request->name;
-        $movie->description = $request->description;
-        $movie->user_id = $user->id;
-        $movie->status_id = 1;
-        $movie->save();
+            $mensaje = "pelicula guardada";
 
-        return redirect('movies');
+            $data = [
+                $movie,
+                $mensaje
+            ];
+
+            return response()->json($data, 200);
+
+        }catch (Exception $e){
+            return response()->error($e->getMessage(), $e->getCode());
+        }
 
     }
 
@@ -70,7 +90,28 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        //
+        try{
+            $movies = Movie::select(
+                'movies.id',
+                'movies.name as name',
+                'movies.description',
+                'users.name as user',
+                'statuses.name as status'
+            )
+                ->join('users', 'movies.user_id', '=' ,'users.id')
+                ->join('statuses', 'movies.status_id', '=' ,'statuses.id')
+                ->where('movies.id', $id)
+                ->first();
+
+            $data = [
+                $movies
+            ];
+
+            return response()->json($data, 200);
+
+        }catch (Exception $e){
+            return response()->error($e->getMessage(), $e->getCode());
+        }
     }
 
     /**
@@ -100,13 +141,24 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $movie= Movie::find($id);
-        $movie->name = $request->name;
-        $movie->description = $request->description;
-        $movie->status_id = $request->status;
-        $movie->save();
+        try{
+            $movie= Movie::find($id);
+            $movie->name = $request->name;
+            $movie->description = $request->description;
+            $movie->status_id = $request->status;
+            $movie->save();
 
-        return redirect('movies');
+            $mensaje = "pelicula actualizada";
+
+            $data = [
+                $movie,
+                $mensaje
+            ];
+
+            return response()->json($data, 200);
+        }catch (Exception $e){
+            return response()->error($e->getMessage(), $e->getCode());
+        }
     }
 
     /**
@@ -117,7 +169,22 @@ class MoviesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $movie = Movie::find($id);
+            $movie->delete();
+
+            $mensaje = "pelicula eliminada";
+
+            $data = [
+                $movie,
+                $mensaje
+            ];
+
+            return response()->json($data, 200);
+
+        }catch (Exception $e){
+            return response()->error($e->getMessage(), $e->getCode());
+        }
     }
 
     public function showSessionData(){
